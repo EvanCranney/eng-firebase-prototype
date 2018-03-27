@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SampleCollection" representedClassName="SampleCollection" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="units" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SampleUnit" inverseName="collection" inverseEntity="SampleUnit" syncable="YES"/>
+    </entity>
+    <entity name="SampleUnit" representedClassName="SampleUnit" syncable="YES" codeGenerationType="class">
+        <attribute name="miscOne" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="miscTwo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="collection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SampleCollection" inverseName="units" inverseEntity="SampleCollection" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SampleCollection" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="SampleUnit" positionX="-54" positionY="-9" width="128" height="105"/>
+    </elements>
+</model>
